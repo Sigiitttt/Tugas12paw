@@ -1,47 +1,66 @@
-# Tugas 12 - Pemrograman Aplikasi Web (PAW)
+# 📚 Aplikasi CRUD Buku dengan PHP & MySQL
 
-## 📌 Deskripsi Proyek
+Proyek ini merupakan tugas mata kuliah **Pemrograman Sistem Database**, yang berfokus pada pembuatan aplikasi CRUD (Create, Read, Update, Delete) menggunakan **PHP prosedural** dan **MySQL**.
+Aplikasi ini juga dilengkapi dengan fitur **unggah cover buku**, **pencarian (search)**, dan **paginasi (pagination)**.
 
-Proyek ini adalah aplikasi **CRUD sederhana berbasis PHP & MySQL** untuk mengelola data **Genre Film**. Aplikasi ini dibuat sebagai bagian dari Tugas 12 pada mata kuliah **Pemrograman Aplikasi Web (PAW)**.
+---
+
+## 🚀 Demo Online
+
+🌐 [tugas12paw.infinityfreeapp.com](https://tugas12paw.infinityfreeapp.com)
+
+> *Jika belum bisa diakses, kemungkinan masih dalam proses propagasi DNS (maksimal 72 jam).*
+
+---
+
+## 🧩️ Fitur Utama
+
+✅ **Tambah Buku** – Input data buku baru lengkap dengan cover.
+✅ **Edit Buku** – Ubah informasi buku atau ganti cover.
+✅ **Hapus Buku** – Menghapus data buku dari database dan file cover dari server.
+✅ **Upload File** – Menyimpan cover buku di folder `/uploads/`.
+✅ **Pencarian & Filter** – Cari buku berdasarkan judul atau genre.
+✅ **Paginasi** – Menampilkan daftar buku per halaman agar tampilan tetap rapi.
+✅ **Hosting Online** – Diterapkan menggunakan **InfinityFree** (hosting gratis).
+
+---
 
 ## 🛠️ Teknologi yang Digunakan
 
-* **Bahasa Pemrograman:** PHP (Native)
+* **Bahasa Pemrograman:** PHP 8.x (Prosedural)
 * **Database:** MySQL
-* **Server:** InfinityFree (Free Hosting)
-* **Frontend:** HTML, CSS, dan Bootstrap
+* **Frontend:** HTML5, CSS3
+* **Server Hosting:** InfinityFree (cPanel)
+* **Text Editor:** Visual Studio Code
+
+---
 
 ## 📂 Struktur Folder
 
 ```
-📁 tugas12paw/
-│
-├── konek.php              # Koneksi ke database
-├── index.php              # Halaman utama menampilkan data genre
-├── create.php             # Form untuk menambah data genre
-├── update.php             # Form untuk mengedit data genre
-├── delete.php             # Menghapus data genre
-└── read.php               # Menampilkan daftar data genre
+htdocs/
+├── index.php        # Halaman utama daftar buku
+├── add.php          # Form tambah buku
+├── edit.php         # Form edit buku
+├── delete.php       # Menghapus buku
+├── db.php           # Koneksi database
+├── style.css        # Desain tampilan web
+└── uploads/         # Folder penyimpanan file cover buku
 ```
-
-## 🧩 Fitur Utama
-
-* Menampilkan daftar genre film.
-* Menambah data genre baru.
-* Mengedit data genre.
-* Menghapus data genre.
-
-## 💾 Struktur Database
-
-Nama Database: **db_film**
-
-### Tabel: `genre`
-
-| Kolom | Tipe Data              | Keterangan      |
-| ----- | ---------------------- | --------------- |
-| id    | INT(11) AUTO_INCREMENT | Primary Key     |
-| nama  | VARCHAR(100)           | Nama Genre Film |
 
 ---
 
-**Catatan:** Pastikan file `konek.php` sudah disesuaikan dengan konfigurasi database kamu sebelum menjalankan aplikasi.
+## 🗄️ Struktur Database
+
+### Tabel: `buku`
+
+| Kolom        | Tipe Data      | Keterangan             |
+| ------------ | -------------- | ---------------------- |
+| id           | INT (Auto Inc) | Primary Key            |
+| judul        | VARCHAR(255)   | Judul buku             |
+| pengarang    | VARCHAR(255)   | Nama pengarang         |
+| penerbit     | VARCHAR(255)   | Nama penerbit          |
+| tahun_terbit | YEAR           | Tahun terbit buku      |
+| harga        | DECIMAL(10,2)  | Harga buku             |
+| genre        | VARCHAR(50)    | Genre buku (dropdown)  |
+| cover        | VARCHAR(255)   | Nama file cover gambar |
