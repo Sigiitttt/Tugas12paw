@@ -5,6 +5,9 @@ Aplikasi ini juga dilengkapi dengan fitur **unggah cover buku**, **pencarian (se
 
 ---
 
+<img width="1615" height="980" alt="image" src="https://github.com/user-attachments/assets/675ff5d1-a0ec-455a-bee2-3a0c7ff4b0ca" />
+
+
 ## 🚀 Demo Online
 
 🌐 [tugas12paw.infinityfreeapp.com](https://tugas12paw.infinityfreeapp.com)
@@ -64,3 +67,4 @@ htdocs/
 | harga        | DECIMAL(10,2)  | Harga buku             |
 | genre        | VARCHAR(50)    | Genre buku (dropdown)  |
 | cover        | VARCHAR(255)   | Nama file cover gambar |
+
